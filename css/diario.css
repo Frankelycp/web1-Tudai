@@ -8,8 +8,7 @@ body {
     min-height: 100vh; /* Altura mínima del viewport */
 }
 
-.titulo-h1
-{
+.titulo-h1 {
     text-align: center;
 }
 
@@ -22,6 +21,7 @@ footer {
     margin-top: auto;
 
 }
+
 .img {
     padding: 10px 0;
     width: 100%;
@@ -34,6 +34,7 @@ header {
     padding: 10px;
     text-align: center;
 }
+
 article {
     margin: 20px;
     padding: 20px;
@@ -44,9 +45,11 @@ article {
     font-style: italic;
     color: #f00;
 }
+
 ul {
     list-style-type: square;
 }
+
 .imagen {
     max-width: 100%;
     height: auto;

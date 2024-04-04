@@ -5,9 +5,15 @@ body {
     background-color: #f0f0f0;
 }
 
-.titulo-h1
-{
+.titulo-h1 {
     text-align: center;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -18,4 +24,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+
+.container {
+    width: 50%; /* Puedes ajustar el ancho del contenedor según tus necesidades */
 }
