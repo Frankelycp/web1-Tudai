@@ -29,6 +29,7 @@ function tirarDados(){
     document.getElementById("dado2").classList.remove("img");
     document.getElementById("dado1").classList.add("dados")
     document.getElementById("dado2").classList.add("dados")
+    document.getElementById("dado2").classList.add("dados");
 
 }
 
