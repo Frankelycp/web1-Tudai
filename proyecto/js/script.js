@@ -6,11 +6,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     menuIcon.addEventListener('click', function () {
-        menu.classList.toggle('show');
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        } else {
+            menu.classList.add('show');
+        }
     });
 
     modoToggle.addEventListener('change', function () {
-        body.classList.toggle('modo-oscuro');
+        if (body.classList.contains('modo-oscuro')) {
+            body.classList.remove('modo-oscuro');
+        } else {
+            body.classList.add('modo-oscuro');
+        }
     });
 
 //ESTE ES LA FUNCION PARA GENERAR EL CAPTCHA
