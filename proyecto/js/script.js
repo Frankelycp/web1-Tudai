@@ -11,10 +11,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     modoToggle.addEventListener('change', function () {
         body.classList.toggle('modo-oscuro');
-        if (body.classList.contains('modo-oscuro')) {
-            localStorage.setItem('modo-preferido', 'oscuro');
-        } else {
-            localStorage.setItem('modo-preferido', 'claro');
-        }
     });
 });
