@@ -1,44 +1,43 @@
 "use strict";
+document.addEventListener("DOMContentLoaded",function () {
 
-document.getElementById("btnLanzar").addEventListener("click", tirarDados);
-let d1;
-let d2;
+    var elementoOculto = document.getElementById("oculto");
+    elementoOculto.hidden = true;
+    document.getElementById("toggle").addEventListener("change",esconder);
 
-function tirarDados(){
-
-    d1 = Math.floor((Math.random() * 6 ) + 1);
-    d2 = Math.floor((Math.random() * 6 ) + 1);
-
-    console.log(d1);
-    console.log(d2);
-
-    let suma = d1 + d2;
-
-    console.log("El valor de la suma es: " + suma);
-
-    if(suma === 8){
-        document.getElementById("texto").innerHTML = "SALIO EL 8";
-    }
-    else {
-        document.getElementById("texto").innerHTML = " ";
+    function esconder() {
+        if (elementoOculto.hidden) {
+            elementoOculto.hidden = false;
+        }
+        else {
+            elementoOculto.hidden = true;
+        }
     }
 
-    document.getElementById("dado1").src = "./img/dado"+d1+".png";
-    document.getElementById("dado2").src = "./img/dado"+d2+".png";
-    document.getElementById("dado1").classList.remove("img");
-    document.getElementById("dado2").classList.remove("img");
-    document.getElementById("dado1").classList.add("dados")
-    document.getElementById("dado2").classList.add("dados")
-    document.getElementById("dado1").classList.add("dados");
-    document.getElementById("dado2").classList.add("dados");
+    });
 
-    let valor= -3;
 
-    if (valor<0) {
 
-        console.log(valor =- valor);
-    }
-}
+// document.addEventListener("DOMContentLoaded",function () {
+//     const collection = Array.from(document.getElementsByTagName('li'))
+//
+//     let tareas = [];
+//     let lista = [];
+//     document.getElementById("boton").addEventListener("click", agregarTareas);
+//
+//     function agregarTareas() {
+//         if (tareas.length <= 9) {
+//             tareas.push(document.getElementById("tareas").value);
+//             console.log(tareas);
+//             document.getElementById("tareas").value = "";
+//             var listItem = document.createElement("li");
+//             listItem.textContent = tareas;
+//             lista.appendChild(listItem);
+//         }
+//
+//     else alert("no puede ingresar mas valores a la lista")
+//     }
+// });
 
 
 // /**ESTRUCTURA GENERAL

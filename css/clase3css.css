@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.drop-cap {
+    font-size: 300%;
+    float: left;
+    margin-right: 5px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.visited {
+    color: purple;
+}
+
+blockquote {
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+}
+
+.dialogue {
+    list-style-type: none;
+}
+
+.dialogue li {
+    margin: 10px 0;
+}
+
+.dialogue .character {
+    font-weight: bold;
+}
+

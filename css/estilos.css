@@ -6,9 +6,9 @@ body {
 }
 
 .titulo-h1 {
-    text-align: center;
+    /*text-align: center;*/
+    color: black;
 }
-
 
 .wrapper {
     display: flex;
@@ -26,7 +26,10 @@ footer {
     padding: 10px 0;
 }
 
-
 .container {
     width: 50%; /* Puedes ajustar el ancho del contenedor según tus necesidades */
+    background-color: #f0f0f0;
+    color: red;
 }
+
+

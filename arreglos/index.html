@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEB 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/estilos.css" rel="stylesheet">
+</head>
+
+<style>
+    .toggleContainer{
+        position: relative;
+        width: 90px;
+        height: 30px;
+    }
+    .toggle {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+    .switch {
+        position: relative;
+        display: block;
+        background: lightgray;
+        width: 90px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+
+    checked .switch {
+        background: red;
+    }
+
+    .switch::before {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #320c0c;
+        border-radius: 50%;
+        margin: 0px 2px;
+        left: 0%;
+        transition: 1s;
+    }
+
+    checked .switch:before {
+        left: 100%;
+        transform: translate(calc(-100% - 2px), -50%);
+    }
+
+</style>
+<body>
+
+<main>
+    <h1 class="titulo-h1">TEST</h1>
+</main>
+<div class="toggle-container">
+    <input type="checkbox" id="toggle" class="toggle-input">
+    <label for="toggle" class="toggle-label"></label>
+</div>
+<div>
+    <p>Crear un tipo de botón Ver más que
+        despliegue más contenido de texto.
+        El botón debe ser tipo toggle que muestre
+        y esconda la información expandida. El botón se
+    <div id="oculto">
+    <p>que muestre y esconda la
+        información expandida. El botón se
+        debe poder reutilizar en dos partes del sitio,
+        expandiendo la información específica de las secciones
+        donde se utiliza. Es importante reutilizar las funciones
+        creadas
+    </p>
+    </div>
+
+    </p>
+</div>
+
+
+<script src="js/js.js"></script>
+
+</footer>
+</body>
+</html>

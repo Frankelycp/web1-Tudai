@@ -1,0 +1,24 @@
+.container{
+    /*esto es para colocar los div en columnas agregando flex direction column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 30%;
+    margin: 10px;
+    height: 120px;
+}
+
+.dados{
+    width: 30%;
+    margin: 10px;
+    height: 70px;
+    width: 70px ;
+}
+
+button{
+    width: 30%;
+}

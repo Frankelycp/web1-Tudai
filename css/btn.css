@@ -1,0 +1,23 @@
+.container{
+    /*esto es para colocar los div en columnas agregando flex direction column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    width: 30%;
+}
+
+.btn1{
+    background-color: red;
+}
+
+.btn3{
+    background-color: blue;
+}
+.btn2{
+     background-color: yellow;
+ }
