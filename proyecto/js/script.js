@@ -3,8 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let menu = document.querySelector('.menu');
     let body = document.querySelector('body');
     let modoToggle = document.querySelector('.modo-toggle input[type="checkbox"]');
+    let lista = document.getElementById('lista');
+    let tablas = document.querySelectorAll('.table');
+    let tituloTabla = document.getElementById('tituloTabla');
 
+    lista.addEventListener('click', function(event) {
+        tituloTabla.classList.add('oculto');
 
+        for (let i = 0; i < tablas.length; i++) {
+            tablas[i].classList.add('oculto');
+        }
+        let elemento = event.target.innerText.split(' ').join('');
+        let tablaMostrar = document.getElementById('tabla' + elemento);
+        if (tablaMostrar) {
+            tablaMostrar.classList.remove('oculto');
+            tituloTabla.classList.remove('oculto');
+
+            tituloTabla.innerText = 'Mostrando:' + elemento;
+        }
+    });
     menuIcon.addEventListener('click', function () {
         menu.classList.toggle('show');
     });

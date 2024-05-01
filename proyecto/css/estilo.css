@@ -53,6 +53,10 @@ main {
     padding: 20px;
 }
 
+header, footer, .tituloTabla {
+    border: 1px solid #ccc;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -85,6 +89,7 @@ footer {
 .modo-oscuro {
     background-color: #302f34;
     color: #fff;
+    border-color: #666;
 }
 
 
@@ -137,6 +142,16 @@ footer {
     transform: translateX(26px);
 }
 
+.oculto {
+    display: none;
+}
+
+section p{
+    text-align: center;
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    /*padding: 10px; !* Espaciado interior *!*/
+}
 
 @media only screen and (max-width: 600px) {
     .menu {
