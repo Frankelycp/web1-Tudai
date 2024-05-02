@@ -152,6 +152,10 @@ section p{
     color: #333; /* Color del texto */
     /*padding: 10px; !* Espaciado interior *!*/
 }
+.imagen-tabla{
+    height: 100px;
+    width: 100px;
+}
 
 @media only screen and (max-width: 600px) {
     .menu {
