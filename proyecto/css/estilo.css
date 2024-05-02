@@ -69,7 +69,7 @@ tr:hover {
     background-color: #ddd;
 }
 
-img {
+.logo {
     width: 100px;
     height: 100px;
 }
@@ -137,6 +137,10 @@ footer {
     transform: translateX(26px);
 }
 
+.imagen-tabla{
+    width: 100px;
+    height: 100px;
+}
 
 @media only screen and (max-width: 600px) {
     .menu {
