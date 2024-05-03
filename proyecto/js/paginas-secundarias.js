@@ -1,10 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let c = document.getElementById("c");
+    let menuIcon = document.querySelector('.menu-icon');
+    let menu = document.querySelector('.menu');
+    let inputCapcha = document.getElementById("inputCaptcha");
+    let formulario = document.getElementById("formulario");
     let clickCount = 0;
     const MAX_CLICKS = 3;
     let captcha = '';
 
-    document.getElementById("formulario").addEventListener("submit", function(event) {
+    menuIcon.addEventListener('click', function () {
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        } else {
+            menu.classList.add('show');
+        }
+    });
+
+    formulario.addEventListener("submit", function(event) {
         event.preventDefault();
         validar();
     });
@@ -18,21 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return resultado;
     }
-
     function generarCaptcha() {
         captcha = letrasAleatorias(5);
+        //ESTE ES EL ID DEL PARAFO DONDE SE GENERARA EL CAPTCHA
         document.getElementById("captcha").innerHTML = captcha;
     }
     generarCaptcha();
 
     function validar() {
         let mensaje = "";
-        if (c.value === "") {
+        if (inputCapcha.value === "") {
             generarCaptcha();
             mensaje = "Por favor, ingrese el captcha.";
         } else {
             clickCount++;
-            if (!(c.value === captcha && clickCount <= MAX_CLICKS)) {
+            if (!(inputCapcha.value === captcha && clickCount <= MAX_CLICKS)) {
                 mensaje = "Captcha Invalido, le quedan " + (MAX_CLICKS - clickCount) + " intentos";
                 if (clickCount >= MAX_CLICKS) {
                     generarCaptcha();
@@ -42,11 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 clickCount = 0;
                 mensaje = "Captcha Valido";
-                c.value = "";
+                inputCapcha.value = "";
                 document.getElementById("captcha").innerHTML = "";
             }
         }
 
-        document.getElementById("catp").innerHTML = mensaje;
+        document.getElementById("mensaje").innerHTML = mensaje;
     }
+
 });

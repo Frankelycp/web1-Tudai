@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     let menuIcon = document.querySelector('.menu-icon');
     let menu = document.querySelector('.menu');
-    let body = document.querySelector('body');
-    let modoToggle = document.querySelector('.modo-toggle input[type="checkbox"]');
     let lista = document.getElementById('lista');
-    let tablas = document.querySelectorAll('.table');
+    let tablas = document.querySelectorAll('.tablas');
     let tituloTabla = document.getElementById('tituloTabla');
 
     lista.addEventListener('click', function(event) {
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (tablaMostrar) {
             tablaMostrar.classList.remove('oculto');
             tituloTabla.classList.remove('oculto');
-
             tituloTabla.innerText = 'Mostrando:' + elemento;
         }
     });
@@ -29,14 +26,5 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.add('show');
         }
     });
-
-    modoToggle.addEventListener('change', function () {
-        if (body.classList.contains('modo-oscuro')) {
-            body.classList.remove('modo-oscuro');
-        } else {
-            body.classList.add('modo-oscuro');
-        }
-    });
-
 
 });
