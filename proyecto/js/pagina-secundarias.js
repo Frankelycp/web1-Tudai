@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.add('modo-oscuro');
         }
     });
+//ESTE ES LA FUNCION PARA GENERAR EL CAPTCHA
+function generarCaptcha() {
+    captcha = Math.floor(Math.random()*90*70*90*5*9);
 
+    // ACA ABAJO LE INDICAMOS AL PARRAFO  POR ID QUE LE ASIGNE EL VALOR DEL CAPTCHA LO DEJO COMENTO
+    // YA QUE NO SE QUE ID LE COLOCASTE.
+    // document.getElementById("captcha").innerHTML = captcha
+}
+generarCaptcha();
 
 });
