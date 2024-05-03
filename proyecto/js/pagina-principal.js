@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < tablas.length; i++) {
             tablas[i].classList.add('oculto');
         }
-        let elemento = event.target.innerText.split(' ').join('');
+        let elemento = event.target.innerHTML;
         let tablaMostrar = document.getElementById('tabla' + elemento);
         if (tablaMostrar) {
             tablaMostrar.classList.remove('oculto');
@@ -38,13 +38,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-//ESTE ES LA FUNCION PARA GENERAR EL CAPTCHA
-    function generarCaptcha() {
-        captcha = Math.floor(Math.random()*90*70*90*5*9);
 
-        // ACA ABAJO LE INDICAMOS AL PARRAFO  POR ID QUE LE ASIGNE EL VALOR DEL CAPTCHA LO DEJO COMENTO
-        // YA QUE NO SE QUE ID LE COLOCASTE.
-        // document.getElementById("captcha").innerHTML = captcha
-    }
-    generarCaptcha();
 });
