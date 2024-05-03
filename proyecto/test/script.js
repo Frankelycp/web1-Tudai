@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     let c = document.getElementById("c");
-    let submitButton = document.getElementById("submitButton");
     let clickCount = 0;
     const MAX_CLICKS = 3;
+    let captcha = '';
+
     document.getElementById("formulario").addEventListener("submit", function(event) {
         event.preventDefault();
         validar();
@@ -19,27 +20,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function generarCaptcha() {
-        captcha = Math.floor(Math.random()*90*70*90*5*9);
-        document.getElementById("captcha").innerHTML = captcha + letrasAleatorias(10);
+        captcha = letrasAleatorias(5);
+        document.getElementById("captcha").innerHTML = captcha;
     }
     generarCaptcha();
 
-    submitButton.addEventListener("click", function(event) {
-        clickCount++;
-        if (clickCount >= MAX_CLICKS) {
-            generarCaptcha();
-            clickCount = 0;
-        }
-    });
     function validar() {
-        if (c.value == captcha){
-            document.getElementById("catp").innerHTML = "PASO";
-            document.getElementById("test").innerHTML = " ";
-            c.value = ""
+        let mensaje = "";
+        if (c.value === "") {
+            generarCaptcha();
+            mensaje = "Por favor, ingrese el captcha.";
+        } else {
+            clickCount++;
+            if (!(c.value === captcha && clickCount <= MAX_CLICKS)) {
+                mensaje = "Captcha Invalido, le quedan " + (MAX_CLICKS - clickCount) + " intentos";
+                if (clickCount >= MAX_CLICKS) {
+                    generarCaptcha();
+                    clickCount = 0;
+                    mensaje = "Ha excedido el número máximo de intentos. Por favor, vuelva a intentarlo.";
+                }
+            } else {
+                clickCount = 0;
+                mensaje = "PASO";
+                c.value = "";
+                document.getElementById("captcha").innerHTML = "";
+            }
         }
-        else {
-            document.getElementById("catp").innerHTML = "Para validar debe ingresar el Catpcha le quedan " + (MAX_CLICKS-clickCount) + " intentos";
-            document.getElementById("test").innerHTML = f;
-        }
+
+        document.getElementById("catp").innerHTML = mensaje;
     }
 });
