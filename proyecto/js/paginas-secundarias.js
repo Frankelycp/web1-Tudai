@@ -2,10 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let menuIcon = document.querySelector('.menu-icon');
     let menu = document.querySelector('.menu');
     let inputCapcha = document.getElementById("inputCaptcha");
-    //let formulario = document.getElementById("formulario");
     let clickCount = 0;
     const MAX_CLICKS = 3;
-    let captcha = '';
+    // let captcha = '';
 
     menuIcon.addEventListener('click', function () {
         if (menu.classList.contains('show')) {
@@ -15,15 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    document.getElementById("formulario").addEventListener("enviar", function (event) {
+    document.getElementById("formulario").addEventListener("submit", function (event) {
        event.preventDefault();
        validar(); 
     });
 
-    // document.getElementById("formulario").addEventListener("enviar", function(event) {
-    //     event.preventDefault();
-    //     validar();
-    // });
 
     function letrasAleatorias(cantidad) {
         let letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -40,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("captcha").innerHTML = captcha;
     }
     generarCaptcha();
+    console.log(captcha);
 
     function validar() {
         let mensaje = "";
@@ -48,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mensaje = "Por favor, ingrese el captcha.";
         } else {
             clickCount++;
-            if (!(inputCapcha.value === captcha && clickCount <= MAX_CLICKS)) {
+            if (!(inputCapcha.value === captcha.innerText && clickCount <= MAX_CLICKS)) {
                 mensaje = "Captcha Invalido, le quedan " + (MAX_CLICKS - clickCount) + " intentos";
                 if (clickCount >= MAX_CLICKS) {
                     generarCaptcha();
