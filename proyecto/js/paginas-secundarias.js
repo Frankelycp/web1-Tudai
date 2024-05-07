@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let inputCapcha = document.getElementById("inputCaptcha");
     let clickCount = 0;
     const MAX_CLICKS = 3;
-    // let captcha = '';
+    
 
     menuIcon.addEventListener('click', function () {
         if (menu.classList.contains('show')) {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("captcha").innerHTML = captcha;
     }
     generarCaptcha();
-    console.log(captcha);
+    
 
     function validar() {
         let mensaje = "";
