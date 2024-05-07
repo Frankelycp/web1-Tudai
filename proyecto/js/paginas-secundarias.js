@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let menu = document.querySelector('.menu');
     let inputCapcha = document.getElementById("inputCaptcha");
     let clickCount = 0;
+    let nombre = document.getElementById("nombre")
+    let apellido = document.getElementById("apellido");
+    let email = document.getElementById("email");
+    let telefono = document.getElementById("telefono");
+    let comentarios = document.getElementById("comentarios");
     const MAX_CLICKS = 3;
     
 
@@ -55,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 clickCount = 0;
                 mensaje = "Captcha Valido";
                 inputCapcha.value = "";
+                nombre.value = "";
+                apellido.value = "";
+                email.value = "";
+                telefono.value = "";
+                comentarios.value = "";
                 document.getElementById("captcha").innerHTML = "";
             }
         }
