@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let menuIcon = document.querySelector('.menu-icon');
+    //let menuIcon = document.querySelector('.menu-icon');
+    let menuIcon = document.getElementById('menuicon');
     let menu = document.querySelector('.menu');
     let lista = document.getElementById('lista');
     let tablas = document.querySelectorAll('.tablas');

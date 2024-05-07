@@ -186,7 +186,7 @@ section p{
     header nav {
         display: none;
     }
-    #ocultar{
+    .ocultar{
         display: none;
     }
 }
