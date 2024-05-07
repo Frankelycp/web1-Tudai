@@ -153,6 +153,11 @@ section p{
     /*padding: 10px; !* Espaciado interior *!*/
 }
 
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media only screen and (max-width: 600px) {
     .menu {

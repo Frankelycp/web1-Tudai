@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
-<header>
-    <img src="./img/logo.jpg">
-    <div class="modo-toggle">
-        <input type="checkbox" class="modo-checkbox" id="modo-checkbox">
-        <label for="modo-checkbox"></label>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <img src="./img/logo.jpg">
+        <div class="modo-toggle">
+            <input type="checkbox" class="modo-checkbox" id="modo-checkbox">
+            <label for="modo-checkbox"></label>
+        </div>
+        <button class="menu-icon">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="menu">
     <ul>
@@ -28,14 +29,25 @@
     </ul>
 </div>
 <main>
-<form>
-
-    <input type="text" name="lenguaje" id="lenguaje">
-    <input type="text" name="lenguaje" id="lenguaje">
-    <input type="text" name="lenguaje" id="lenguaje">
-
-
-</form>
+    <div class="contenedor">
+        <form method="" id="formulario">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre" >
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese Apellido" >
+            <label for="correo">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Ingrese Email" >
+            <label for="telefono">Telefono: </label>
+            <input type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono" >
+            <label for="comentarios">Comentarios: </label>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="5" ></textarea>
+            <label for="inputCaptcha"></label>
+            <p id="captcha"></p>
+            <input type="text" name="inputCaptcha" id="inputCaptcha" >
+            <button id="enviar">Enviar</button>
+            <p id="mensaje"></p>
+        </form>
+    </div>
 </main>
 
 <footer>

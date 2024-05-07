@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let menuIcon = document.querySelector('.menu-icon');
     let menu = document.querySelector('.menu');
     let inputCapcha = document.getElementById("inputCaptcha");
-    let formulario = document.getElementById("formulario");
+    //let formulario = document.getElementById("formulario");
     let clickCount = 0;
     const MAX_CLICKS = 3;
     let captcha = '';
@@ -15,10 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    formulario.addEventListener("submit", function(event) {
-        event.preventDefault();
-        validar();
+    document.getElementById("formulario").addEventListener("enviar", function (event) {
+       event.preventDefault();
+       validar(); 
     });
+
+    // document.getElementById("formulario").addEventListener("enviar", function(event) {
+    //     event.preventDefault();
+    //     validar();
+    // });
 
     function letrasAleatorias(cantidad) {
         let letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -30,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return resultado;
     }
     function generarCaptcha() {
-        captcha = letrasAleatorias(5);
+        let captcha = letrasAleatorias(5);
         //ESTE ES EL ID DEL PARAFO DONDE SE GENERARA EL CAPTCHA
         document.getElementById("captcha").innerHTML = captcha;
     }
