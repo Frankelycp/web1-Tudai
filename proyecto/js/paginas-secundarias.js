@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 telefono.value = "";
                 comentarios.value = "";
                 document.getElementById("captcha").innerHTML = "";
+                generarCaptcha();//solo con esta linea se vuelve a generar un nuevo código y queda visible
             }
         }
 
