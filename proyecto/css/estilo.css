@@ -148,16 +148,67 @@ footer {
 
 section p{
     text-align: center;
-    background-color: #f0f0f0; /* Color de fondo */
-    color: #333; /* Color del texto */
-    /*padding: 10px; !* Espaciado interior *!*/
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.contenedor{
+.contenedor {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#mensaje {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.captcha{
+    font-family : captcha;
+}
+
+@font-face {
+    font-family: 'captcha';
+    src: url('../css/Moms_typewriter.ttf') format('truetype');
+}
 
 @media only screen and (max-width: 600px) {
     .menu {
@@ -191,7 +242,7 @@ section p{
     header nav {
         display: none;
     }
-    .ocultar{
+    .ocultarImagen{
         display: none;
     }
 }
