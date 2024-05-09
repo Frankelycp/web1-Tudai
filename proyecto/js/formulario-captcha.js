@@ -41,8 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function mostrarMensaje(mensaje) {
         document.getElementById("mensaje").innerHTML = mensaje;
+        setTimeout (limpiarMensaje, 10000);
     };
     
+    function limpiarMensaje (){
+        document.getElementById("mensaje").innerHTML = "";
+    };
 
     function validar() {
         let mensaje = "";
