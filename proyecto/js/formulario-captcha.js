@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let menuIcon = document.querySelector('.menu-icon');
-    let menu = document.querySelector('.menu');
     let inputCaptcha = document.getElementById("inputCaptcha");
     let clickCount = 0;
     let nombre = document.getElementById("nombre")
@@ -9,15 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let telefono = document.getElementById("telefono");
     let comentarios = document.getElementById("comentarios");
     const MAX_CLICKS = 3;
-    
-
-    menuIcon.addEventListener('click', function () {
-        if (menu.classList.contains('show')) {
-            menu.classList.remove('show');
-        } else {
-            menu.classList.add('show');
-        }
-    });
 
     document.getElementById("formulario").addEventListener("submit", function (event) {
        event.preventDefault();
