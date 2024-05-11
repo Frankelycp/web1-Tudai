@@ -3,18 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
     let modoToggle = document.querySelector('.modo-toggle input[type="checkbox"]');
     let menuIcon = document.querySelector('.menu-icon');
     let menu = document.querySelector('.menu');
-    let mostrarImagenProducto = document.querySelector('.mostrarImagenProducto');
-    
-    // modoToggle.addEventListener('change', function () {
-    //     if (body.classList.contains('modo-oscuro')) {
-    //         body.classList.remove('modo-oscuro');
-    //     } else {
-    //         body.classList.add('modo-oscuro');
-    //     }
-    // });
+    let tabla = document.querySelector('.tablaProductos');
 
-    mostrarImagenProducto.addEventListener('click', function (event) {
-       console.log(event.target.);
+    let imagenProductos = document.getElementById("imagenProducto")
+
+    tabla.addEventListener("click", function(e) {
+        let elementoClicleado = e.target;
+        if (elementoClicleado.tagName === "TD" &&  elementoClicleado.className === "producto") {
+            let img = elementoClicleado.innerText;
+            if (imagenProductos.classList.contains('ocultarImagen')) {
+                imagenProductos.classList.remove('ocultarImagen');
+            } else {
+                imagenProductos.classList.add('ocultarImagen');
+            }
+            imagenProductos.src = "./img/" + img + ".jpg";
+        }
+
     });
 
 

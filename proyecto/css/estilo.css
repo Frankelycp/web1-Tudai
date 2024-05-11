@@ -49,9 +49,7 @@ body {
     background-color: #555;
 }
 
-main {
-    padding: 20px;
-}
+
 
 header, footer, .tituloTabla {
     border: 1px solid #ccc;
@@ -146,11 +144,21 @@ footer {
     display: none;
 }
 
+/*section{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
 section p{
     text-align: center;
     background-color: #f0f0f0;
     color: #333;
 }
+
+/*section.destacados aside{*/
+/*  width: 66%;*/
+/*}*/
+
 
 .contenedor {
     max-width: 500px;
@@ -205,6 +213,12 @@ button:hover {
     font-family : captcha;
 }
 
+.imagenProductos{
+    display: none;
+}
+
+
+
 @font-face {
     font-family: 'captcha';
     src: url('../css/Moms_typewriter.ttf') format('truetype');
@@ -248,6 +262,28 @@ button:hover {
 }
 
 @media only screen and (min-width: 601px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    main div.destacados {
+        width: 70%;
+        margin-left: 30px;
+    }
+
+    main div.presentacion {
+        width: 30%;
+        text-align: justify;
+        font-size: 30px;
+        color: black;
+    }
+
+
+
+
     .menu {
         display: none; /* Ocultar menú lateral en escritorio */
     }
