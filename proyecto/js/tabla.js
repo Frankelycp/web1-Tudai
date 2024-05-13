@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     let tabla = document.querySelector(".tablaProductos");
     let imagenProductos = document.getElementById("imagenProducto");
