@@ -71,10 +71,6 @@ tr:hover {
     background-color: #ddd;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-}
 
 footer {
     background-color: #302f34;
@@ -213,9 +209,15 @@ button:hover {
     font-family : captcha;
 }
 
-.imagenProductos{
-    display: none;
+/*.imagenProductos{*/
+/*    display: none;*/
+/*}*/
+
+img {
+    width: 100px;
+    height: 100px;
 }
+
 
 
 
@@ -231,6 +233,12 @@ button:hover {
         transition: width 0.3s ease, left 0.3s ease;
     }
 
+
+    img#imagenProducto {
+        width: 200px;
+        height: 200px;
+    }
+    
     .menu.show {
         width: 200px;
         right: 0;
@@ -249,10 +257,9 @@ button:hover {
     }
 
     .menu-icon {
-        display: block; /* Mostrar el ícono del menú en dispositivos móviles */
+        display: block;
     }
 
-    /* Ocultar barra de navegación en dispositivos móviles */
     header nav {
         display: none;
     }
@@ -280,9 +287,6 @@ button:hover {
         font-size: 30px;
         color: black;
     }
-
-
-
 
     .menu {
         display: none; /* Ocultar menú lateral en escritorio */
