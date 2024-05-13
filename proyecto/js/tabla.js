@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    let tabla = document.querySelector('.tablaProductos');
+    let tabla = document.querySelector(".tablaProductos");
     let imagenProductos = document.getElementById("imagenProducto");
 
     tabla.addEventListener("click", function(e) {
@@ -12,6 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
         } else{
             imagenProductos.classList.add("ocultarImagen");
         }
-
     });
 });
