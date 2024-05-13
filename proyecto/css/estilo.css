@@ -51,7 +51,7 @@ body {
 
 
 
-header, footer, .tituloTabla {
+header, footer{
     border: 1px solid #ccc;
 }
 
@@ -261,15 +261,19 @@ img {
     }
 
     main div.destacados {
-        width: 70%;
+        width: 60%;
         margin-left: 30px;
+    }
+    main div.destacados p,ol{
+        margin-left: 50px;
     }
 
     main div.presentacion {
-        width: 30%;
+        width: 40%;
         text-align: justify;
         font-size: 30px;
         color: black;
+        font-size: 95%;
     }
 
     .menu {

@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let body = document.querySelector('body');
-    let modoToggle = document.querySelector('.modo-toggle input[type="checkbox"]');
-    let menuIcon = document.querySelector('.menu-icon');
-    let menu = document.querySelector('.menu');
-    let tabla = document.querySelector('.tablaProductos');
 
+    let tabla = document.querySelector('.tablaProductos');
     let imagenProductos = document.getElementById("imagenProducto");
 
     tabla.addEventListener("click", function(e) {
@@ -18,7 +14,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
-
-
-
 });
