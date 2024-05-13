@@ -221,6 +221,7 @@ img {
 
 
 
+
 @font-face {
     font-family: 'captcha';
     src: url('../css/Moms_typewriter.ttf') format('truetype');
@@ -265,6 +266,9 @@ img {
     }
     .ocultarImagen{
         display: none;
+    }
+    .contenedorImagen{
+        text-align: center;
     }
 }
 
@@ -313,4 +317,8 @@ img {
         color: #fff;
         text-decoration: none;
     }
+    img#imagenProducto{
+        display: none;
+    }
+    
 }
