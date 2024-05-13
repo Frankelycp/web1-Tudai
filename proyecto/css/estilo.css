@@ -140,20 +140,12 @@ footer {
     display: none;
 }
 
-/*section{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
 
 section p{
     text-align: center;
     background-color: #f0f0f0;
     color: #333;
 }
-
-/*section.destacados aside{*/
-/*  width: 66%;*/
-/*}*/
 
 
 .contenedor {
@@ -209,23 +201,11 @@ button:hover {
     font-family : captcha;
 }
 
-/*.imagenProductos{*/
-/*    display: none;*/
-/*}*/
-
 img {
     width: 100px;
     height: 100px;
 }
 
-
-
-
-
-@font-face {
-    font-family: 'captcha';
-    src: url('../css/Moms_typewriter.ttf') format('truetype');
-}
 
 @media only screen and (max-width: 600px) {
     .menu {

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let telefono = document.getElementById("telefono");
     let comentarios = document.getElementById("comentarios");
     const MAX_CLICKS = 3;
+    const CANTIDADCARACTERESCAPTCHA = 10;
 
     document.getElementById("formulario").addEventListener("submit", function (event) {
        event.preventDefault();
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return resultado;
     }
     function generarCaptcha() {
-        let captcha = letrasAleatorias(5);
+        let captcha = letrasAleatorias(CANTIDADCARACTERESCAPTCHA);
         //ESTE ES EL ID DEL PARAFO DONDE SE GENERARA EL CAPTCHA
         document.getElementById("captcha").innerHTML = captcha;
     }
@@ -37,11 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
         email.value = "";
         telefono.value = "";
         comentarios.value = "";
+        setTimeout (limpiarMensaje, 3000);
     };
 
     function mostrarMensaje(mensaje) {
         document.getElementById("mensaje").innerHTML = mensaje;
-        setTimeout (limpiarMensaje, 10000);
+        
     };
     
     function limpiarMensaje (){
