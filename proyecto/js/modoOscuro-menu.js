@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let modoToggle = document.querySelector('.modo-toggle input[type="checkbox"]');
     let menuIcon = document.querySelector(".menu-icon");
     let menu = document.querySelector(".menu");
-    
-    modoToggle.addEventListener("change", function () {
 
+    modoToggle.addEventListener("change", function () {
         if (body.classList.contains("modo-oscuro")) {
             body.classList.remove("modo-oscuro");
         } else {
@@ -20,6 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.classList.add("show");
         }
     });
-
 });
 

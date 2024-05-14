@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let tablas = document.querySelectorAll(".tablas");
     let tituloTabla = document.getElementById("tituloTabla");
 
-    lista.addEventListener("click", function(event) {
+    lista.addEventListener("click", function (event) {
         tituloTabla.classList.add("oculto");
 
         for (let i = 0; i < tablas.length; i++) {
@@ -17,5 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
             tituloTabla.innerText = "Mostrando:" + elemento;
         }
     });
-    
 });
