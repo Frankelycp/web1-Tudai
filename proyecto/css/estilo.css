@@ -199,22 +199,27 @@ button:hover {
     font-weight: bold;
 }
 
-.captcha {
-    font-family: captcha;
-}
-
 img {
     width: 100px;
     height: 100px;
 }
 
 footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    display: flex;
     background-color: #302f34;
     color: #fff;
     text-align: center;
     border: 1px solid #ccc;
     padding: 10px;
     margin-top: auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+.imagenFooter{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 @media only screen and (max-width: 600px) {
