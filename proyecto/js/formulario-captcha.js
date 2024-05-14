@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let mensaje = "";
         if (inputCaptcha.value === "") {
             generarCaptcha();
-            mensaje = "Por favor, ingrese el captcha.";
+            mensaje = "Por favor, ingrese caracteres en el captcha.";
         } else {
             contadorClick++;
             if (!(inputCaptcha.value === captcha.innerText && contadorClick <= MAX_CLICKS)) {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (contadorClick >= MAX_CLICKS) {
                     generarCaptcha();
                     contadorClick = 0;
-                    mensaje = "Ha excedido el número máximo de intentos";
+                    mensaje = "Excedió el número máximo de intentos";
                 }
             } else {
                 contadorClick = 0;

@@ -148,7 +148,7 @@ aside p {
 
 .contenedorFormulario, .contenedorTablaProductos{
     display: flex;
-    max-width: 500px;
+    width: 500px;
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -167,7 +167,7 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: 450px;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
