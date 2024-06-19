@@ -17,26 +17,23 @@ header {
     align-items: center;
 }
 
-.menu-icon {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
+header nav {
     display: none;
 }
 
 .menu {
+    width: 60px;
+    right: -60px;
+    transition: width 0.3s ease, left 0.3s ease;
     position: fixed;
     top: 100px;
     background-color: #302f34;
     padding-top: 20px;
-    transition: left 0.3s ease;
 }
-
 .menu ul {
     list-style-type: none;
     padding: 0;
+    overflow: hidden;
 }
 
 .menu li {
@@ -51,10 +48,24 @@ header {
     border-bottom: 1px solid #555;
 }
 
+.menu.show {
+    width: 200px;
+    right: 0;
+}
+
+.menu-icon {
+    display: block;
+    background-color: #302f34;
+}
+
 .menu li a:hover {
     background-color: #555;
 }
 
+main div.presentacion,
+    div.destacados {
+        margin: 5%;
+    }
 
 table {
     width: 100%;
@@ -74,12 +85,25 @@ tr:hover {
     background-color: #4d4b4b;
 }
 
+.ocultarImagen {
+    display: none;
+}
+
+.contenedorImagen {
+    text-align: center;
+    margin: 5%;
+}
+
+img#imagenProducto {
+    width: 200px;
+    height: 200px;
+}
+
 .modo-oscuro {
     background-color: #302f34;
     color: #fff;
     border-color: #666;
 }
-
 
 .modo-oscuro th,
 .modo-oscuro td,
@@ -138,13 +162,11 @@ tr:hover {
     display: none;
 }
 
-
 aside p {
     text-align: center;
     background-color: #f0f0f0;
     color: #333;
 }
-
 
 .contenedorFormulario, .contenedorTablaProductos{
     display: flex;
@@ -220,63 +242,9 @@ footer {
     margin: 10px;
     width: 50px;
     height: 50px;
-}
+} 
 
-@media only screen and (max-width: 600px) {
-
-    header nav {
-        display: none;
-    }
-
-    .menu {
-        width: 60px;
-        right: -60px;
-        transition: width 0.3s ease, left 0.3s ease;
-    }
-
-    .menu.show {
-        width: 200px;
-        right: 0;
-    }
-
-    .menu ul {
-        overflow: hidden;
-    }
-
-    .menu li {
-        margin-bottom: 0;
-    }
-
-    .menu li a {
-        padding: 10px;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    main div.presentacion,
-    div.destacados {
-        margin: 5%;
-    }
-
-    .ocultarImagen {
-        display: none;
-    }
-
-    .contenedorImagen {
-        text-align: center;
-        margin: 5%;
-    }
-
-    img#imagenProducto {
-        width: 200px;
-        height: 200px;
-    }
-
-}
-
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 660px) {
 
     header nav {
         display: block;
@@ -299,6 +267,10 @@ footer {
     }
 
     .menu {
+        display: none;
+    }
+    
+    .menu-icon {
         display: none;
     }
 
@@ -327,6 +299,10 @@ footer {
 
     img#imagenProducto {
         display: none;
+    }
+
+    .ocultarImagen {
+        display: block;
     }
 
 }
