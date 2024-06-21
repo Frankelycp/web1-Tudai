@@ -17,27 +17,33 @@ header {
     align-items: center;
 }
 
-header nav {
-    display: none;
-}
-
 .menu {
-    width: 60px;
-    right: -60px;
-    transition: width 0.3s ease, left 0.3s ease;
     position: fixed;
     top: 100px;
     background-color: #302f34;
     padding-top: 20px;
+    transition: left 0.3s ease;
 }
+.menu {
+    width: 60px;
+    right: -60px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
 .menu ul {
     list-style-type: none;
     padding: 0;
+}
+.menu ul {
     overflow: hidden;
 }
 
 .menu li {
     margin-bottom: 10px;
+}
+
+.menu li {
+    margin-bottom: 0;
 }
 
 .menu li a {
@@ -47,26 +53,14 @@ header nav {
     padding: 10px;
     border-bottom: 1px solid #555;
 }
-
-.menu.show {
-    width: 200px;
-    right: 0;
-}
-
-.menu-icon {
-    display: block;
-    background-color: #302f34;
-    font-size: 24px;
+.menu li a {
+    padding: 10px;
 }
 
 .menu li a:hover {
     background-color: #555;
 }
 
-main div.presentacion,
-    div.destacados {
-        margin: 5%;
-    }
 
 table {
     width: 100%;
@@ -86,25 +80,12 @@ tr:hover {
     background-color: #4d4b4b;
 }
 
-.ocultarImagen {
-    display: none;
-}
-
-.contenedorImagen {
-    text-align: center;
-    margin: 5%;
-}
-
-img#imagenProducto {
-    width: 200px;
-    height: 200px;
-}
-
 .modo-oscuro {
     background-color: #302f34;
     color: #fff;
     border-color: #666;
 }
+
 
 .modo-oscuro th,
 .modo-oscuro td,
@@ -163,17 +144,16 @@ img#imagenProducto {
     display: none;
 }
 
+
 aside p {
     text-align: center;
     background-color: #f0f0f0;
     color: #333;
 }
 
-/*SEPARE CONTENEDOR FORMULARIO DE TABLA PARA PONER LATERAL LA TABLA COMENTARIOS*/
 
 .contenedorFormulario, .contenedorTablaProductos{
     display: flex;
-    align-items: start;
     max-width: 500px;
     margin: 0 auto;
     margin-top: 5%;
@@ -182,13 +162,6 @@ aside p {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-
-.comentarios{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-}
-
 
 form {
     display: flex;
@@ -213,16 +186,17 @@ label {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #302f34;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 24px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
 #mensaje {
@@ -255,23 +229,54 @@ footer {
     height: 50px;
 }
 
-#paginacion{
-    margin-top: 20px;
-    text-align: center;
-}
 
-#paginacion button{
-    margin: 0 5px;
-    padding: 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
+
+    header nav {
+        display: none;
+    }
+
+    
+
+    .menu.show {
+        width: 200px;
+        right: 0;
+    }
+
+    
+
+    
+
+    
+
+    .menu-icon {
+        display: block;
+    }
+
+    main div.presentacion,
+    div.destacados {
+        margin: 5%;
+    }
+
+    .ocultarImagen {
+        display: none;
+    }
+
+    .contenedorImagen {
+        text-align: center;
+        margin: 5%;
+    }
+
+    img#imagenProducto {
+        width: 200px;
+        height: 200px;
+    }
+
 
 @media only screen and (min-width: 660px) {
+
+    .ocultarImagen {
+        display: block;
+    }
 
     header nav {
         display: block;
@@ -294,10 +299,6 @@ footer {
     }
 
     .menu {
-        display: none;
-    }
-    
-    .menu-icon {
         display: none;
     }
 
@@ -327,16 +328,14 @@ footer {
     img#imagenProducto {
         display: none;
     }
-
-    .ocultarImagen {
-        display: block;
-    }
-
-    .comentarios{
-        display: flex;
-        flex-direction: row;
-        justify-content: baseline;
+    .menu-icon {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
     }
     
-
+    
 }

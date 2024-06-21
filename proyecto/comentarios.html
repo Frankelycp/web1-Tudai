@@ -30,34 +30,51 @@
             <li><a href="productos.html">Productos</a></li>
         </ul>
     </div>
-
-    <div class="contenedorFormulario">
-        <form method="" id="formulario">
-            <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre" required>
-            <label for="apellido">Apellido: </label>
-            <input type="text" name="apellido" id="apellido" placeholder="Ingrese Apellido" required>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" placeholder="Ingrese Email" required>
-            <label for="telefono">Telefono: </label>
-            <input type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono" required>
-            <label for="comentarios">Comentarios: </label>
-            <textarea name="comentarios" id="comentarios" cols="30" rows="5" required></textarea>
-            <label for="inputCaptcha"></label>
-            <p class="captcha" id="captcha"></p>
-            <input type="text" name="inputCaptcha" id="inputCaptcha">
-            <button id="enviar">Enviar</button>
-            <p id="mensaje"></p>
-        </form>
+    <div class="comentarios">
+        <div class="contenedorFormulario">
+            <form method="" id="formulario">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre" required>
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese Apellido" required>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Ingrese Email" required>
+                <label for="telefono">Telefono: </label>
+                <input type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono" required>
+                <label for="comentarios">Comentarios: </label>
+                <textarea name="comentarios" id="comentarios" cols="30" rows="5" required></textarea>
+                <label for="inputCaptcha"></label>
+                <p class="captcha" id="captcha"></p>
+                <input type="text" name="inputCaptcha" id="inputCaptcha">
+                <button id="enviar">Enviar</button>
+                <p id="mensaje"></p>
+            </form>
+        </div>
+        <section>
+            <table class="tablaComentarios">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>E-mail</th>
+                        <th>Comentarios</th>
+                        <th>Editar/Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </section>
     </div>
-
+    <div id="paginacion"></div>
     <footer>
         <h4>FundArt</h4>
-        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="./img/logo-instagram.ico" alt="Instagram"></a>
+        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="./img/logoinstagram.ico" alt="Instagram"></a>
     </footer>
 
-    <script src="js/modoOscuro-menu.js"></script>
-    <script src="js/formulario-captcha.js"></script>
+    <script src="js/modooscuromenu.js"></script>
+    <script src="js/formulariocaptcha.js"></script>
 
 </body>
 
