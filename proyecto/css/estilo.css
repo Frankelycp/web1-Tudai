@@ -225,6 +225,11 @@ button:hover {
     background-color: #0056b3;
 }
 
+.btn_mostar, .btn_editar, .btn_eliminar{
+    background-color: transparent;
+    font-size: 10px;
+}
+
 #mensaje {
     width: 310px;
     margin-top: 10px;
@@ -338,5 +343,17 @@ footer {
         justify-content: baseline;
     }
     
+    .t_comentarios{
+        display: flex ;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .thead_comentarios{
+        justify-content: space-between;
+    }
 
 }
