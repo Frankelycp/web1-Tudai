@@ -11,7 +11,7 @@ const url = 'https://66756e56a8d2b4d072f000ae.mockapi.io/api/comentarios';
 
 document.getElementById("formulario").addEventListener("submit", function (event) {
     event.preventDefault();
-    validar();
+    enviarFormulario();
 });
 
 
@@ -48,8 +48,9 @@ function limpiarMensaje() {
     document.getElementById("mensaje").innerHTML = "";
 };
 
-function validar() {
+function enviarFormulario() {
     let mensaje = "";
+    console.log(mensaje.class);
     if (inputCaptcha.value === "") {
         generarCaptcha();
         mensaje = "Por favor, ingrese caracteres en el captcha.";
@@ -88,12 +89,12 @@ async function enviarComentario(){
     
     try{
         let res = await fetch(url, {
-        "method": "POST",
-        "headers": {"content-type": "application/json"},
-        "body": JSON.stringify(fila)
+            "method": "POST",
+            "headers": {"content-type": "application/json"},
+            "body": JSON.stringify(fila)
         });
         if (res.status === 201){
-        console.log ("Cargado!");
+            console.log ("Cargado!");
         }
     } catch (error){
         console.log(error);
@@ -108,14 +109,14 @@ async function obtenerDatos(){
         let res = await fetch (url);
         let json = await res.json();
         for (const fila of json){
-            tabla.innerHTML += `<tr>
+            tabla.innerHTML += `<tr class="filajson">
                           <td>${fila.id}</td>
                           <td>${fila.nombre}</td>
                           <td>${fila.apellido}</td>
                           <td>${fila.mail}</td>
                           <td>${fila.telefono}</td>
                           <td>${fila.comentario}</td>
-                          <td>
+                          <td class="btn_api">
                             <button class="btn_mostar" onclick="mostrarFila(${fila.id})">&#128269;</button>
                             <button class="btn_editar" onclick="modificarFila(${fila.id})">&#128221;</button>
                             <button class="btn_eliminar" onclick="eliminarFila(${fila.id})">&#10060</button>

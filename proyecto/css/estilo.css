@@ -68,13 +68,18 @@ main div.presentacion,
         margin: 5%;
     }
 
-table {
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+} */
+.tablaProductos, .tablas{
     width: 100%;
     border-collapse: collapse;
     border: 2px solid #ddd;
     margin-bottom: 20px;
 }
-
 th,
 td {
     padding: 8px;
@@ -92,7 +97,7 @@ tr:hover {
 
 .contenedorImagen {
     text-align: center;
-    margin: 5%;
+    margin: 3%;
 }
 
 img#imagenProducto {
@@ -171,7 +176,20 @@ aside p {
 
 /*SEPARE CONTENEDOR FORMULARIO DE TABLA PARA PONER LATERAL LA TABLA COMENTARIOS*/
 
-.contenedorFormulario, .contenedorTablaProductos{
+.contenedorFormulario {
+    display: flex;
+    align-items: start;
+    max-width: 500px;
+    max-height: 550px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.contenedorTablaProductos {
     display: flex;
     align-items: start;
     max-width: 500px;
@@ -181,12 +199,6 @@ aside p {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-}
-
-.comentarios{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
 }
 
 
@@ -230,6 +242,7 @@ button:hover {
     font-size: 10px;
 }
 
+
 #mensaje {
     width: 310px;
     margin-top: 10px;
@@ -238,8 +251,8 @@ button:hover {
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 footer {
@@ -260,21 +273,43 @@ footer {
     height: 50px;
 }
 
-#paginacion{
-    margin-top: 20px;
-    text-align: center;
+.contenedorTablaComentarios{
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 20px;
+    max-height: 300px;
+    max-width: 500px;
+    overflow: scroll;
 }
 
-#paginacion button{
-    margin: 0 5px;
-    padding: 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
+.t_comentarios{
+    display: flex ;
+    flex-direction: column;
+    max-height: 500px;
+    
 }
+.tbody_comentarios {
+    overflow: scroll;
+}
+
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.thead_comentarios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filajson{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 10px;
+
+}
+
 
 @media only screen and (min-width: 660px) {
 
@@ -343,17 +378,48 @@ footer {
         justify-content: baseline;
     }
     
-    .t_comentarios{
-        display: flex ;
-        flex-direction: column;
-        width: 90%;
-        margin: 20px;
-        justify-content: flex-start;
-        align-items: flex-start;
+    .contenedorTablaComentarios{
+        display: flex;
+        align-items: start;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 20px;
+        border-radius: 10px;
+        max-height: 550px;
+        max-width: 1000px;
+        overflow: hidden;
     }
 
+    .t_comentarios{
+        display: flex ;
+        flex-direction: column;   
+        max-height: 550px;     
+    }
+    .tbody_comentarios {
+        overflow: scroll;
+    }
+    
     .thead_comentarios{
+        display: flex;
         justify-content: space-between;
+        font: size 16px;
+    }
+    
+    .filajson{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 10px;
+    
+    }
+    .btn_api {
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+    }
+    .btn_mostar, .btn_editar, .btn_eliminar{
+        background-color: transparent;
     }
 
 }

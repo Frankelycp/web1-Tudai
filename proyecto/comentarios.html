@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
     <header>
-        <img src="./img/logo.jpg">
+        <img src="img/logo.jpg">
         <div class="modo-toggle">
             <input type="checkbox" class="modo-checkbox" id="modo-checkbox">
             <label for="modo-checkbox"></label>
@@ -50,32 +50,33 @@
                 <p id="mensaje"></p>
             </form>
         </div>
-        <section>
+        <div class="contenedorTablaComentarios">
             <table class="t_comentarios">
-                <thead class="thead_comentarios">
-                    <tr>
+                <thead >
+                    <tr class="thead_comentarios">
                         <th>Id</th>
                         <th>Nombre</th>
+                        <th>Apellido</th>
                         <th>E-mail</th>
+                        <th>Telefono</th>
                         <th>Comentarios</th>
                         <th>Editar/Eliminar</th>
                     </tr>
                 </thead>
-                <tbody id="tablaComentarios">
+                <tbody class="tbody_comentarios" id="tablaComentarios">
                    
                 </tbody>
             </table>
-        </section>
+        </div>
     </div>
     <div id="paginacion"></div>
     <footer>
         <h4>FundArt</h4>
-        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="./img/logoinstagram.ico" alt="Instagram"></a>
+        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="img/logoinstagram.ico" alt="Instagram"></a>
     </footer>
 
     <script src="js/modooscuromenu.js"></script>
     <script src="js/formulariocaptcha.js"></script>
-    <!-- <script src="js/tabladinamica.js"></script> -->
 
 </body>
 
