@@ -8,6 +8,8 @@ const comentarios = document.getElementById("comentarios");
 const MAX_CLICKS = 3;
 const CANTIDADCARACTERESCAPTCHA = 10;
 const url = 'https://66756e56a8d2b4d072f000ae.mockapi.io/api/comentarios';
+let esEdicion = false;
+let idEditado = null;
 
 document.getElementById("formulario").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -38,6 +40,8 @@ function limpiarFormulario() {
     telefono.value = "";
     comentarios.value = "";
     setTimeout(limpiarMensaje, 3000);
+    esEdicion = false;
+    idEditado = null;
 };
 
 function mostrarMensaje(mensaje) {
@@ -65,16 +69,17 @@ function enviarFormulario() {
             }
         } else {
             contadorClick = 0;
-            enviarComentario();
-            mensaje = "Captcha Valido";
+            if (esEdicion && idEditado) {
+                modificarFila(idEditado);
+            } else {
+                enviarComentario();
+            }
             limpiarFormulario();
             document.getElementById("captcha").innerHTML = "";
             generarCaptcha();
         }
     }
     mostrarMensaje(mensaje);
-    
-
 }
 
 async function enviarComentario(){
@@ -109,16 +114,15 @@ async function obtenerDatos(){
         let res = await fetch (url);
         let json = await res.json();
         for (const fila of json){
-            tabla.innerHTML += `<tr class="filajson">
+            tabla.innerHTML += `<tr>
                           <td>${fila.id}</td>
                           <td>${fila.nombre}</td>
                           <td>${fila.apellido}</td>
                           <td>${fila.mail}</td>
                           <td>${fila.telefono}</td>
                           <td>${fila.comentario}</td>
-                          <td class="btn_api">
-                            <button class="btn_mostar" onclick="mostrarFila(${fila.id})">&#128269;</button>
-                            <button class="btn_editar" onclick="modificarFila(${fila.id})">&#128221;</button>
+                          <td>
+                            <button class="btn_editar" onclick="rellenarFormulario(${fila.id})">&#128221;</button>
                             <button class="btn_eliminar" onclick="eliminarFila(${fila.id})">&#10060</button>
                           </td>
                           </tr>`; 
@@ -130,25 +134,6 @@ async function obtenerDatos(){
 
 obtenerDatos();
 
-async function mostrarFila (id){
-    
-    try {
-        let res = await fetch (`${url}/${id}`);
-        let json = await res.json();
-        document.getElementById("nombre").value = json.nombre;
-        document.getElementById("apellido").value = json.apellido;
-        document.getElementById("email").value = json.mail;
-        document.getElementById("telefono").value = json.telefono;
-        document.getElementById("comentarios").value = json.comentario;
-        if (res.status === 200){
-            console.log("Los datos han sido mostrados");
-        }
-
-    } catch (error) {
-        console.error(error);
-        
-    }
-}
 
 async function eliminarFila (id){
     
@@ -167,28 +152,47 @@ async function eliminarFila (id){
     obtenerDatos();
 }
 
-async function modificarFila(id){
-    let fila = {
-        "nombre" : nombre.value,
-        "apellido" : apellido.value,
-        "mail" : email.value,
-        "telefono" : telefono.value,
-        "comentario" : comentarios.value
-      }
-      
-      try{
-        let res = await fetch(`${url}/${id}`, {
-          "method": "PUT",
-          "headers": {"content-type": "application/json"},
-          "body": JSON.stringify(fila)
-        });
-        if (res.status === 200){
-          console.log ("Modificado!");
-        }
-      } catch (error){
-        console.log(error);
-      }
-      obtenerDatos();
-      limpiarFormulario();       
+async function rellenarFormulario(id) {
+    try {
+        let res = await fetch(`${url}/${id}`);
+        let fila = await res.json();
+        nombre.value = fila.nombre;
+        apellido.value = fila.apellido;
+        email.value = fila.mail;
+        telefono.value = fila.telefono;
+        comentarios.value = fila.comentario;
+
+        esEdicion = true;
+        idEditado = id;
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+async function modificarFila(id) {
+    let fila = {
+        "nombre": nombre.value,
+        "apellido": apellido.value,
+        "mail": email.value,
+        "telefono": telefono.value,
+        "comentario": comentarios.value
+    }
+
+    try {
+        let res = await fetch(`${url}/${id}`, {
+            "method": "PUT",
+            "headers": { "content-type": "application/json" },
+            "body": JSON.stringify(fila)
+        });
+        if (res.status === 200) {
+            console.log("Modificado!");
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    obtenerDatos();
+    limpiarFormulario();
+}
+
+obtenerDatos();
 

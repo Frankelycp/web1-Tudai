@@ -237,7 +237,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-.btn_mostar, .btn_editar, .btn_eliminar{
+.btn_editar, .btn_eliminar{
     background-color: transparent;
     font-size: 10px;
 }
@@ -273,41 +273,30 @@ footer {
     height: 50px;
 }
 
-.contenedorTablaComentarios{
-    display: flex;
-    border: 1px solid #ccc;
-    margin: 20px;
-    max-height: 300px;
-    max-width: 500px;
-    overflow: scroll;
-}
-
-.t_comentarios{
-    display: flex ;
-    flex-direction: column;
-    max-height: 500px;
-    
-}
-.tbody_comentarios {
-    overflow: scroll;
-}
-
 .comentarios{
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
 }
 
-.thead_comentarios{
-    display: flex;
-    justify-content: space-between;
+.contenedorTablaComentarios {
+    margin: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 20px;
+    border: 2px solid #ddd;
 }
 
-.filajson{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 10px;
+.contenedorTablaComentarios table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+}
 
+.contenedorTablaComentarios th,
+.contenedorTablaComentarios td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 
@@ -372,54 +361,22 @@ footer {
         display: block;
     }
 
-    .comentarios{
-        display: flex;
+    .comentarios {
         flex-direction: row;
-        justify-content: baseline;
     }
-    
     .contenedorTablaComentarios{
         display: flex;
-        align-items: start;
-        border: 1px solid #ccc;
+        border: 2px solid #ddd;
+        max-height: 550px;
+        border-bottom: none;
+
         margin: 0 auto;
         margin-top: 5%;
         margin-bottom: 5%;
         padding: 20px;
-        border-radius: 10px;
-        max-height: 550px;
-        max-width: 1000px;
-        overflow: hidden;
-    }
-
-    .t_comentarios{
-        display: flex ;
-        flex-direction: column;   
-        max-height: 550px;     
-    }
-    .tbody_comentarios {
         overflow: scroll;
     }
-    
-    .thead_comentarios{
-        display: flex;
-        justify-content: space-between;
-        font: size 16px;
-    }
-    
-    .filajson{
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 10px;
-    
-    }
-    .btn_api {
-        display: flex;
-        justify-content: flex-end;
-        flex-flow: row wrap;
-    }
-    .btn_mostar, .btn_editar, .btn_eliminar{
-        background-color: transparent;
-    }
+
+
 
 }
