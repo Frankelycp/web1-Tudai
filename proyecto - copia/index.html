@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <img src="./img/logo.jpg">
+        <div class="modo-toggle">
+            <input type="checkbox" class="modo-checkbox" id="modo-checkbox">
+            <label for="modo-checkbox"></label>
+        </div>
+        <button class="menu-icon" id="menuicon">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="comentarios.html">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="presentacion">
+            <h1>¡Bienvenido a FundArt!</h1>
+            <p>
+                Somos un emprendimiento orientado la venta de artículos de hierro fundido para la cocina y la parrilla.
+            </p>
+            <p>
+                El hierro fundido es uno de los mejores materiales para la cocina, ya que distribuye el calor de manera
+                uniforme, retiene la temperatura por más tiempo y le otorga durabilidad al elemento.
+            </p>
+            <p>
+                Si necesitas ayuda para elegir el mejor producto para tus necesidades, no dudes en escribirnos.
+            </p>
+            <h4>¡Gracias por visitarnos!</h4>
+        </div>
+
+        <div class="destacados">
+            <p>Haz clic en los elementos de la lista para ver más detalles:</p>
+            <ol id="lista">
+                <li>Ofertas</li>
+                <p>Descubre nuestras increíbles ofertas en una amplia variedad de
+                    productos</p>
+                <li>Envio-Gratis</li>
+                <p>Aprovecha nuestros envíos gratis para recibir tus productos favoritos sin costos adicionales.</p>
+                <li>Discontinuos</li>
+                <p>No te pierdas nuestra sección de productos discontinuos, donde encontrarás
+                    artículos únicos y exclusivos a precios especiales
+                </p>
+            </ol>
+
+            <aside class="destacados">
+                <p id="tituloTabla"></p>
+                <table id="tablaOfertas" class="tablas oculto">
+                    <thead>
+                        <tr>
+                            <th>Articulo</th>
+                            <th>Descripcion</th>
+                            <th class="ocultarImagen"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sarten</td>
+                            <td>Sarten 26 cm</td>
+                            <td class="ocultarImagen"><img src="img/Sartenes.jpg" alt="Sarten Grande"></td>
+                        </tr>
+                        <tr>
+                            <td>Sarten</td>
+                            <td>Sarten 22 cm</td>
+                            <td class="ocultarImagen"><img src="img/Sartenes.jpg" alt="Sarten chica"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="tablaEnvio-Gratis" class="tablas oculto">
+                    <thead>
+                        <tr>
+                            <th>Articulo</th>
+                            <th>Descripcion</th>
+                            <th class="ocultarImagen"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Olla</td>
+                            <td>Olla de 10 lts</td>
+                            <td class="ocultarImagen"><img src="img/Ollas.jpg" alt="Olla grande"></td>
+                        </tr>
+                        <tr>
+                            <td>Planchas</td>
+                            <td>Plancha industrial</td>
+                            <td class="ocultarImagen"><img src="img/Planchas.jpg" alt="Plancha industrial"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="tablaDiscontinuos" class="tablas oculto">
+                    <thead>
+                        <tr>
+                            <th>Articulo</th>
+                            <th>Descripcion</th>
+                            <th class="ocultarImagen"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Olla</td>
+                            <td>Horno Holandes</td>
+                            <td class="ocultarImagen"><img src="img/Horno-Holandes.jpg" alt="Horno Holandes"></td>
+                        </tr>
+                        <tr>
+                            <td>Olla</td>
+                            <td>Olla con tapa</td>
+                            <td class="ocultarImagen"><img src="img/Fondue.jpg" alt="Fondue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <h4>FundArt</h4>
+        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="./img/logo-instagram.ico" alt="Instagram"></a>
+        <!-- <p>Derechos reservados &copy; 2024</p> -->
+    </footer>
+
+    <script src="./js/modoOscuro-menu.js"></script>
+    <script src="./js/pagina-principal.js"></script>
+    
+</body>
+
+</html>

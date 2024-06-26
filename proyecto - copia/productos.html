@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <img src="./img/logo.jpg">
+        <div class="modo-toggle">
+            <input type="checkbox" class="modo-checkbox" id="modo-checkbox">
+            <label for="modo-checkbox"></label>
+        </div>
+        <button class="menu-icon">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="comentarios.html">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+        </ul>
+    </div>
+
+    <section class="contenedorTablaProductos">
+        <table class="tablaProductos">
+            <thead>
+                <tr>
+                    <th>Productos</th>
+                    <th>Caracteristicas</th>
+                    <th class="ocultarImagen"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="producto">Ollas</td>
+                    <td>de 10 a 1.5 lts</td>
+                    <td class="ocultarImagen"><img src="./img/Ollas.jpg" alt="Ollas"></td>
+                </tr>
+                <tr>
+                    <td class="producto">Sartenes</td>
+                    <td>24, 26 y 27 cm s/tapa</td>
+                    <td class="ocultarImagen"><img src="./img/Sartenes.jpg" alt="Sarten"></td>
+                </tr>
+                <tr>
+                    <td class="producto">Horno-Holandes</td>
+                    <td>grande y chicos</td>
+                    <td class="ocultarImagen"><img src="./img/Horno-Holandes.jpg" alt="Horno Holandes"></td>
+                </tr>
+                <tr>
+                    <td class="producto">Planchas</td>
+                    <td>Grillas, dobles faz</td>
+                    <td class="ocultarImagen"><img src="./img/Planchas.jpg" alt="Planchas"></td>
+                </tr>
+                <tr>
+                    <td class="producto">Fondue</td>
+                    <td>Varios tamaños</td>
+                    <td class="ocultarImagen"><img src="./img/Fondue.jpg" alt="Calderos y Fondues"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="contenedorImagen">
+        <img class="ocultarImagen" id="imagenProducto" src="">
+    </div>
+
+    <footer>
+        <h4>FundArt</h4>
+        <a href="https://www.instagram.com/fundart_tandil?igsh=c2ZxeWpndHV4MHJr" target="_blank"><img class="imagenFooter" src="./img/logo-instagram.ico" alt="Instagram"></a>
+    </footer>
+
+    <script src="js/tabla.js"></script>
+    <script src="js/modoOscuro-menu.js"></script>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let url = 'https://6660b1f25425580055b4e9ff.mockapi.io/productos/comentarios';
     let paginaActual = 1;
     let elementosPorPagina = 10;
-    let datos = [];
+    let datos = []; // Variable global para almacenar todos los datos cargados
 
     filtroInput.addEventListener("input", function () {
         let filtro = filtroInput.value.trim().toLowerCase();
@@ -16,10 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function filtrarDatos(filtro) {
-        let filtroMinusculas = filtro.toLowerCase(); // Convertir filtro a minúsculas
-
         let datosFiltrados = datos.filter(item =>
-            item.nombre.toLowerCase().includes(filtroMinusculas)
+            item.nombre.toLowerCase().includes(filtro)
         );
 
         renderizarTabla(datosFiltrados);
@@ -93,8 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 limpiarFormulario();
                 document.getElementById("captcha").innerHTML = "";
-                window.location.reload();
-
                 generarCaptcha();
             }
         }
@@ -272,24 +268,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let cantidadItemsInput = document.getElementById("cantidadItems");
     let crearItemsButton = document.getElementById("crearItems");
 
+    async function crearItemsAutomaticamente() {
 
-    function crearItems() {
-        let cantidad = document.getElementById('cantidad').value;
-        for (let i = 0; i < cantidad; i++) {
-            mostrarItems();
-        }
-    }
+        let cantidad = parseInt(document.getElementById('cantidadItems').value);
 
 
-    async function crearItems() {
-
-        let cantidad = parseInt(document.getElementById('cantidad').value);
 
             let items = [];
             for (let i = 0; i < cantidad; i++) {
                 items.push({
                     nombre: `Nombre${i + 1}`,
+                    apellido: `Apellido${i + 1}`,
                     email: `email${i + 1}@ejemplo.com`,
+                    telefono: '123456789',
+                    comentarios: 'Esto es un comentario Automatico'
                 });
             }
 
@@ -312,6 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error('Error:', error);
             }
         }
+
 
     function mostrarMensajeCarga(mensaje) {
         let mensajeCarga = document.getElementById('mensaje-carga');
